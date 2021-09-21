@@ -14,7 +14,7 @@ output_R2_un.fastq.gz \
 ILLUMINACLIP:AdapterSeq_new.fa:2:30:7:5:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:40
 ```
 
-## (2) Mapping of the trimmed reads was carried out with bwa mem following the pipeline in [Kapun _et al._ 2020](https://academic.oup.com/mbe/article/37/9/2661/5837682) as described in [here](https://github.com/capoony/DrosEU_pipeline) using the reference genome of _S. thoracica_, which can be found [here](www.cgae.de/seto_01_genome_masked.fasta).
+## (2) Mapping of the trimmed reads was carried out with bwa mem following the pipeline in [Kapun _et al._ 2020](https://academic.oup.com/mbe/article/37/9/2661/5837682) as described in [here](https://github.com/capoony/DrosEU_pipeline) using the reference genome of _S. thoracica_, which can be found [here](http://www.cgae.de/seto_01_genome_masked.fasta).
 
 ## (3) After merging the BAM files with _samtools mpileup_ as described [here](https://github.com/capoony/DrosEU_pipeline), we called SNPs using the heuristic SNP caller [PoolSNP](https://github.com/capoony/PoolSNP) using the following parameters.
 
