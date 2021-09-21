@@ -2,10 +2,10 @@
 
 #\ \ AtheneNew.sh
 #\ \
-#
+  #
 #\ \ Created\ by\ Martin\ Kapun\ on\ 16.07.19.
 #\ \
-##\ trim\ on\ server
+  ##\ trim\ on\ server
 
 Folder=(Cyn Neo)
 Old=(CYN_FRA NEO_TUS)
@@ -15,15 +15,15 @@ for i in ${!Folder[*]}
 
 do
 
-java -jar /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/Trimmomatic/trimmomatic-0.36.jar \
-PE -threads 20 \
-/Volumes/MartinResearch3/Wolf2019/FASTQ/${Folder[i]}/20180601.B-${Old[i]}_R1.fastq.gz \
-/Volumes/MartinResearch3/Wolf2019/FASTQ/${Folder[i]}/20180601.B-${Old[i]}_R2.fastq.gz \
-/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R1.fastq.gz \
-/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R1_un.fastq.gz \
-/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R2.fastq.gz \
-/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R2_un.fastq.gz \
-ILLUMINACLIP:/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AdapterSeq_new.fa:2:30:7:5:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:40
+  java -jar /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/Trimmomatic/trimmomatic-0.36.jar \
+    PE -threads 20 \
+    /Volumes/MartinResearch3/Wolf2019/FASTQ/${Folder[i]}/20180601.B-${Old[i]}_R1.fastq.gz \
+    /Volumes/MartinResearch3/Wolf2019/FASTQ/${Folder[i]}/20180601.B-${Old[i]}_R2.fastq.gz \
+    /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R1.fastq.gz \
+    /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R1_un.fastq.gz \
+    /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R2.fastq.gz \
+    /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R2_un.fastq.gz \
+    ILLUMINACLIP:/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AdapterSeq_new.fa:2:30:7:5:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:40
 
 done
 
@@ -35,15 +35,15 @@ for i in ${!Folder[*]}
 
 do
 
-java -jar /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/Trimmomatic/trimmomatic-0.36.jar \
-PE -threads 20 \
-/Volumes/MartinResearch3/Wolf2019/FASTQ/${Folder[i]}/20180601.B-${Old[i]}_R1.fastq.gz \
-/Volumes/MartinResearch3/Wolf2019/FASTQ/${Folder[i]}/20180601.B-${Old[i]}_R2.fastq.gz \
-/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R1.fastq.gz \
-/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R1_un.fastq.gz \
-/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R2.fastq.gz \
-/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R2_un.fastq.gz \
-ILLUMINACLIP:/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AdapterSeq_new.fa:2:30:7:5:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:40
+  java -jar /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/Trimmomatic/trimmomatic-0.36.jar \
+    PE -threads 20 \
+    /Volumes/MartinResearch3/Wolf2019/FASTQ/${Folder[i]}/20180601.B-${Old[i]}_R1.fastq.gz \
+    /Volumes/MartinResearch3/Wolf2019/FASTQ/${Folder[i]}/20180601.B-${Old[i]}_R2.fastq.gz \
+    /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R1.fastq.gz \
+    /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R1_un.fastq.gz \
+    /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R2.fastq.gz \
+    /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${New[i]}_R2_un.fastq.gz \
+    ILLUMINACLIP:/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AdapterSeq_new.fa:2:30:7:5:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:40
 
 done
 
@@ -59,16 +59,16 @@ for i in CYN NEO
 
 do
 
-#bwa mem -t 5 -k 20 /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/ref/SEOR_allpaths.fasta \
-#/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${i}_FRA_R1.fastq.gz \
-#/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${i}_FRA_R2.fastq.gz | \
-#samtools view -Sbh -q 10 > /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/map/${i}_FRA.bam
+  #bwa mem -t 5 -k 20 /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/ref/SEOR_allpaths.fasta \
+    #/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${i}_FRA_R1.fastq.gz \
+    #/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/trimmed/${i}_FRA_R2.fastq.gz | \
+    #samtools view -Sbh -q 10 > /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/map/${i}_FRA.bam
 
-sambamba sort \
--o /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/map/${i}_FRA-sort.bam \
--t 20 \
--p \
-/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/map/${i}_FRA.bam
+  sambamba sort \
+    -o /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/map/${i}_FRA-sort.bam \
+    -t 20 \
+    -p \
+    /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/map/${i}_FRA.bam
 
 done
 
@@ -76,16 +76,16 @@ for i in Bassett Geschinen Hospental Kentucky Montana Sierraville Sorenberg
 
 do
 
-bwa mem -t 22 -k 20 /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/ref/SEOR_allpaths.fasta \
-/Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Neo/${i}Neo/${i}Neo_R1_trimPair.fastq.gz \
-/Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Neo/${i}Neo/${i}Neo_R2_trimPair.fastq.gz | \
-samtools view -Sbh -q 10 > /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/map/${i}Neo_ORTHO.bam
+  bwa mem -t 22 -k 20 /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/ref/SEOR_allpaths.fasta \
+    /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Neo/${i}Neo/${i}Neo_R1_trimPair.fastq.gz \
+    /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Neo/${i}Neo/${i}Neo_R2_trimPair.fastq.gz | \
+    samtools view -Sbh -q 10 > /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/map/${i}Neo_ORTHO.bam
 
-sambamba sort \
--o /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/map/${i}Neo_ORTHO_sorted.bam \
--t 22 \
--p \
-/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/map/${i}Neo_ORTHO.bam
+  sambamba sort \
+    -o /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/map/${i}Neo_ORTHO_sorted.bam \
+    -t 22 \
+    -p \
+    /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/map/${i}Neo_ORTHO.bam
 
 done
 
@@ -96,15 +96,15 @@ for Pop in Westerwald Petroia Maggia Ludwigshafen Lenzerheide MonteCeneri Zurich
 
 do
 
-echo /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Cyn/${Pop}Cyn/${Pop}Cyn_R1_trimPair.fastq.gz
+  echo /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Cyn/${Pop}Cyn/${Pop}Cyn_R1_trimPair.fastq.gz
 
-sh /Volumes/MartinResearch2/Wolf2019/scripts/pipeline/mapping_noTrim_noRealign.sh \
-/Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Cyn/${Pop}Cyn/${Pop}Cyn_R1_trimPair.fastq.gz \
-/Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Cyn/${Pop}Cyn/${Pop}Cyn_R2_trimPair.fastq.gz \
-${Pop} \
-/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${Pop}Cyn \
-bwa \
-/Volumes/MartinResearch2/Wolf2019/references/seto_01_genome
+  sh /Volumes/MartinResearch2/Wolf2019/scripts/pipeline/mapping_noTrim_noRealign.sh \
+    /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Cyn/${Pop}Cyn/${Pop}Cyn_R1_trimPair.fastq.gz \
+    /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Cyn/${Pop}Cyn/${Pop}Cyn_R2_trimPair.fastq.gz \
+    ${Pop} \
+    /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${Pop}Cyn \
+    bwa \
+    /Volumes/MartinResearch2/Wolf2019/references/seto_01_genome
 
 done
 
@@ -112,15 +112,15 @@ for Pop in Bassett Geschinen Hospental Kentucky Sierraville #Montana Sorenberg C
 
 do
 
-echo /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Neo/${Pop}Neo/${Pop}Neo_R1_trimPair.fastq.gz
+  echo /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Neo/${Pop}Neo/${Pop}Neo_R1_trimPair.fastq.gz
 
-sh /Volumes/MartinResearch2/Wolf2019/scripts/pipeline/mapping_noTrim_noRealign.sh \
-/Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Neo/${Pop}Neo/${Pop}Neo_R1_trimPair.fastq.gz \
-/Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Neo/${Pop}Neo/${Pop}Neo_R2_trimPair.fastq.gz \
-${Pop} \
-/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${Pop}Neo \
-bwa \
-/Volumes/MartinResearch2/Wolf2019/references/seto_01_genome
+  sh /Volumes/MartinResearch2/Wolf2019/scripts/pipeline/mapping_noTrim_noRealign.sh \
+    /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Neo/${Pop}Neo/${Pop}Neo_R1_trimPair.fastq.gz \
+    /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/Neo/${Pop}Neo/${Pop}Neo_R2_trimPair.fastq.gz \
+    ${Pop} \
+    /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${Pop}Neo \
+    bwa \
+    /Volumes/MartinResearch2/Wolf2019/references/seto_01_genome
 
 done
 
@@ -128,15 +128,15 @@ for Pop in ABBASorenbergCyn ABBASorenbergNeo ABBAZurichCyn ABBAZurichNeo
 
 do
 
-echo /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/ABBA/${Pop}/${Pop}_R1_trimPair.fastq.gz
+  echo /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/ABBA/${Pop}/${Pop}_R1_trimPair.fastq.gz
 
-sh /Volumes/MartinResearch2/Wolf2019/scripts/pipeline/mapping_noTrim_noRealign.sh \
-/Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/ABBA/${Pop}/${Pop}_R1_trimPair.fastq.gz \
-/Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/ABBA/${Pop}/${Pop}_R2_trimPair.fastq.gz \
-${Pop} \
-/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${Pop} \
-bwa \
-/Volumes/MartinResearch2/Wolf2019/references/seto_01_genome
+  sh /Volumes/MartinResearch2/Wolf2019/scripts/pipeline/mapping_noTrim_noRealign.sh \
+    /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/ABBA/${Pop}/${Pop}_R1_trimPair.fastq.gz \
+    /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/ABBA/${Pop}/${Pop}_R2_trimPair.fastq.gz \
+    ${Pop} \
+    /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${Pop} \
+    bwa \
+    /Volumes/MartinResearch2/Wolf2019/references/seto_01_genome
 
 done
 
@@ -155,14 +155,14 @@ for i in ${!NAME[*]} #ABBASorenbergCyn ABBASorenbergNeo ABBAZurichCyn ABBAZurich
 do
 
 
-## f) re-align around InDels
+  ## f) re-align around InDels
 
-java -Xmx20g -jar /Volumes/MartinResearch2/Wolf2019/scripts/pipeline/scripts/GenomeAnalysisTK-3.4-46/GenomeAnalysisTK.jar \
--T IndelRealigner \
--R /Volumes/MartinResearch2/Wolf2019/references/seto_01_genome.fasta \
--I /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${NAME[i]}${Species[i]}/mapping/${NAME[i]}-dedup.bam \
--targetIntervals /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${NAME[i]}${Species[i]}/mapping//realign_list/${NAME[i]}.list \
--o /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${NAME[i]}${Species[i]}/mapping/${NAME[i]}-dedup_InDel.bam &
+  java -Xmx20g -jar /Volumes/MartinResearch2/Wolf2019/scripts/pipeline/scripts/GenomeAnalysisTK-3.4-46/GenomeAnalysisTK.jar \
+    -T IndelRealigner \
+    -R /Volumes/MartinResearch2/Wolf2019/references/seto_01_genome.fasta \
+    -I /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${NAME[i]}${Species[i]}/mapping/${NAME[i]}-dedup.bam \
+    -targetIntervals /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${NAME[i]}${Species[i]}/mapping//realign_list/${NAME[i]}.list \
+    -o /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${NAME[i]}${Species[i]}/mapping/${NAME[i]}-dedup_InDel.bam &
 
 done
 
@@ -171,14 +171,14 @@ for i in ABBASorenbergCyn ABBASorenbergNeo ABBAZurichCyn ABBAZurichNeo
 do
 
 
-## f) re-align around InDels
+  ## f) re-align around InDels
 
-java -Xmx20g -jar /Volumes/MartinResearch2/Wolf2019/scripts/pipeline/scripts/GenomeAnalysisTK-3.4-46/GenomeAnalysisTK.jar \
--T IndelRealigner \
--R /Volumes/MartinResearch2/Wolf2019/references/seto_01_genome.fasta \
--I /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${i}/mapping/${i}-dedup.bam \
--targetIntervals /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${i}/mapping//realign_list/${i}.list \
--o /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${i}/mapping/${i}-dedup_InDel.bam &
+  java -Xmx20g -jar /Volumes/MartinResearch2/Wolf2019/scripts/pipeline/scripts/GenomeAnalysisTK-3.4-46/GenomeAnalysisTK.jar \
+    -T IndelRealigner \
+    -R /Volumes/MartinResearch2/Wolf2019/references/seto_01_genome.fasta \
+    -I /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${i}/mapping/${i}-dedup.bam \
+    -targetIntervals /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${i}/mapping//realign_list/${i}.list \
+    -o /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/${i}/mapping/${i}-dedup_InDel.bam &
 
 done
 
@@ -214,82 +214,82 @@ echo '''
 ## merge populations with samtools
 
 samtools mpileup -B \
--f /Volumes/MartinResearch2/Wolf2019/references/seto_01_genome.fasta \
--b /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/bamlist.txt \
--q 20 \
--Q 20 \
-| gzip > /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA.mpileup.gz
+  -f /Volumes/MartinResearch2/Wolf2019/references/seto_01_genome.fasta \
+  -b /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/bamlist.txt \
+  -q 20 \
+  -Q 20 \
+  | gzip > /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA.mpileup.gz
 
 ## call SNPs with PoolSNP
 
 sh /Volumes/MartinResearch2/Wolf2019/scripts/PoolSNP-v1.07/PoolSNP.sh  \
-mpileup=/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA.mpileup.gz \
-reference=/Volumes/MartinResearch2/Wolf2019/references/seto_01_genome.fasta \
-names=ABBASorenbergCyn,ABBAZurichCyn,CevennesCyn,EstoniaCyn,LenzerheideCyn,LudwigshafenCyn,MaggiaCyn,MonteCeneriCyn,PetroiaCyn,SorenbergCyn,WesterwaldCyn,ZurichCyn,ABBASorenbergNeo,ABBAZurichNeo,BassettNeo,CevennesNeo,GeschinenNeo,HospentalNeo,KentuckyNeo,MontanaNeo,SierravilleNeo,SorenbergNeo,SorSim,Sor \
-max-cov=/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-cov-0.9.txt \
-min-cov=10 \
-min-count=20 \
-min-freq=0.01 \
-miss-frac=0 \
-jobs=10 \
-base-quality=15 \
-output=/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA \
-badsites=0
+  mpileup=/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA.mpileup.gz \
+  reference=/Volumes/MartinResearch2/Wolf2019/references/seto_01_genome.fasta \
+  names=ABBASorenbergCyn,ABBAZurichCyn,CevennesCyn,EstoniaCyn,LenzerheideCyn,LudwigshafenCyn,MaggiaCyn,MonteCeneriCyn,PetroiaCyn,SorenbergCyn,WesterwaldCyn,ZurichCyn,ABBASorenbergNeo,ABBAZurichNeo,BassettNeo,CevennesNeo,GeschinenNeo,HospentalNeo,KentuckyNeo,MontanaNeo,SierravilleNeo,SorenbergNeo,SorSim,Sor \
+  max-cov=/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-cov-0.9.txt \
+  min-cov=10 \
+  min-count=20 \
+  min-freq=0.01 \
+  miss-frac=0 \
+  jobs=10 \
+  base-quality=15 \
+  output=/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA \
+  badsites=0
 
 sh /Volumes/MartinResearch2/Wolf2019/scripts/PoolSNP-v1.07/PoolSNP.sh  \
-mpileup=/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA.mpileup.gz \
-reference=/Volumes/MartinResearch2/Wolf2019/references/seto_01_genome.fasta \
-names=ABBASorenbergCyn,ABBAZurichCyn,CevennesCyn,EstoniaCyn,LenzerheideCyn,LudwigshafenCyn,MaggiaCyn,MonteCeneriCyn,PetroiaCyn,SorenbergCyn,WesterwaldCyn,ZurichCyn,ABBASorenbergNeo,ABBAZurichNeo,BassettNeo,CevennesNeo,GeschinenNeo,HospentalNeo,KentuckyNeo,MontanaNeo,SierravilleNeo,SorenbergNeo,SorSim,Sor \
-max-cov=/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-cov-0.9.txt \
-min-cov=10 \
-min-count=20 \
-min-freq=0.01 \
-miss-frac=0.1 \
-jobs=10 \
-base-quality=15 \
-output=/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA_missfrac0.1 \
-badsites=0
+  mpileup=/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA.mpileup.gz \
+  reference=/Volumes/MartinResearch2/Wolf2019/references/seto_01_genome.fasta \
+  names=ABBASorenbergCyn,ABBAZurichCyn,CevennesCyn,EstoniaCyn,LenzerheideCyn,LudwigshafenCyn,MaggiaCyn,MonteCeneriCyn,PetroiaCyn,SorenbergCyn,WesterwaldCyn,ZurichCyn,ABBASorenbergNeo,ABBAZurichNeo,BassettNeo,CevennesNeo,GeschinenNeo,HospentalNeo,KentuckyNeo,MontanaNeo,SierravilleNeo,SorenbergNeo,SorSim,Sor \
+  max-cov=/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-cov-0.9.txt \
+  min-cov=10 \
+  min-count=20 \
+  min-freq=0.01 \
+  miss-frac=0.1 \
+  jobs=10 \
+  base-quality=15 \
+  output=/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA_missfrac0.1 \
+  badsites=0
 
 
 python2.7 /Volumes/MartinResearch3/Tad2019/Patrick/scripts/filter-pos-from-vcf.py \
-NA \
-/Volumes/MartinResearch2/Wolf2019/references/seto_repeat_annotation.gff3 \
-/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA_missfrac0.1.vcf.gz \
-| gzip > /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.vcf.gz
+  NA \
+  /Volumes/MartinResearch2/Wolf2019/references/seto_repeat_annotation.gff3 \
+  /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA_missfrac0.1.vcf.gz \
+  | gzip > /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.vcf.gz
 
 ## convert to sync file
 gunzip -c /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.vcf.gz  | parallel \
--k \
---pipe \
--j20 \
---no-notice \
---cat python /Volumes/MartinResearch3/Tad2019/Patrick/scripts/vcf2sync.py \
---input {} \
-| gzip > /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.sync.gz
+  -k \
+  --pipe \
+  -j20 \
+  --no-notice \
+  --cat python /Volumes/MartinResearch3/Tad2019/Patrick/scripts/vcf2sync.py \
+  --input {} \
+  | gzip > /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.sync.gz
 
 
 ## calculate MAF
 gunzip -c /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.sync.gz \
-| parallel \
--k \
---pipe \
--j 20 \
---no-notice \
---cat python2.7 /Volumes/MartinResearch3/Tad2019/Patrick/scripts/AFbyAllele.py \
-{} \
-| gzip > /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz
+  | parallel \
+  -k \
+  --pipe \
+  -j 20 \
+  --no-notice \
+  --cat python2.7 /Volumes/MartinResearch3/Tad2019/Patrick/scripts/AFbyAllele.py \
+  {} \
+  | gzip > /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz
 
 ## calculate MAF
 gunzip -c /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.sync.gz \
-| parallel \
--k \
---pipe \
--j 20 \
---no-notice \
---cat python /Users/mkapun/Documents/GitHub/ABBA-BABA-4-AF/SYNC2AF.py \
---sync {} \
---MinCov 10 \
-| gzip > /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered_mc10.af.gz
+  | parallel \
+  -k \
+  --pipe \
+  -j 20 \
+  --no-notice \
+  --cat python /Users/mkapun/Documents/GitHub/ABBA-BABA-4-AF/SYNC2AF.py \
+  --sync {} \
+  --MinCov 10 \
+  | gzip > /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered_mc10.af.gz
 
 
 ## first test the script
@@ -306,71 +306,71 @@ python3 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA.py --AlleleFrequenci
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_MoN
 
 python /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations MoN,SoN,SoC+MoN,ISoN,ISoC+MoN,SoN,ISoC+MoN,ISoN,SoC+MoN,IZuN,IZuC+MoN,IZuN,ZuC+MoN,CeN,CeC \
---outgroup Sor \
---SNPs 100,500,1000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_MoN
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations MoN,SoN,SoC+MoN,ISoN,ISoC+MoN,SoN,ISoC+MoN,ISoN,SoC+MoN,IZuN,IZuC+MoN,IZuN,ZuC+MoN,CeN,CeC \
+  --outgroup Sor \
+  --SNPs 100,500,1000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_MoN
 
 # Then test the three sympatric populations using Sierraville neocynipsea as H1
 
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_SiN
 
 python /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations SiN,SoN,SoC+SiN,ISoN,ISoC+SiN,SoN,ISoC+SiN,ISoN,SoC+SiN,IZuN,IZuC+SiN,IZuN,ZuC+SiN,CeN,CeC \
---outgroup Sor \
---SNPs 100,500,1000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_SiN
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations SiN,SoN,SoC+SiN,ISoN,ISoC+SiN,SoN,ISoC+SiN,ISoN,SoC+SiN,IZuN,IZuC+SiN,IZuN,ZuC+SiN,CeN,CeC \
+  --outgroup Sor \
+  --SNPs 100,500,1000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_SiN
 
 # Then test the three sympatric populations using Geschinen neocynipsea as H1
 
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_GeN
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations GeN,SoN,SoC+GeN,ISoN,ISoC+GeN,SoN,ISoC+GeN,ISoN,SoC+GeN,IZuN,IZuC+GeN,IZuN,ZuC+GeN,CeN,CeC \
---outgroup Sor \
---SNPs 100,500,1000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_GeN
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations GeN,SoN,SoC+GeN,ISoN,ISoC+GeN,SoN,ISoC+GeN,ISoN,SoC+GeN,IZuN,IZuC+GeN,IZuN,ZuC+GeN,CeN,CeC \
+  --outgroup Sor \
+  --SNPs 100,500,1000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_GeN
 
 # Finally test the three sympatric populations using Hospental neocynipsea as H1
 
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_HoN
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations HoN,SoN,SoC+HoN,ISoN,ISoC+HoN,SoN,ISoC+HoN,ISoN,SoC+HoN,IZuN,IZuC+HoN,IZuN,ZuC+HoN,CeN,CeC \
---outgroup Sor \
---SNPs 100,500,1000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_HoN
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations HoN,SoN,SoC+HoN,ISoN,ISoC+HoN,SoN,ISoC+HoN,ISoN,SoC+HoN,IZuN,IZuC+HoN,IZuN,ZuC+HoN,CeN,CeC \
+  --outgroup Sor \
+  --SNPs 100,500,1000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_HoN
 
 # now flip the tree topology and use Estonia cynipase as H1
 
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations EsC,SoC,SoN+EsC,ISoC,ISoN+EsC,ISoC,SoN+EsC,SoC,ISoN+EsC,IZuC,IZuN+EsC,ZuC,IZuN+EsC,CeC,CeN \
---outgroup Sor \
---SNPs 100,500,1000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations EsC,SoC,SoN+EsC,ISoC,ISoN+EsC,ISoC,SoN+EsC,SoC,ISoN+EsC,IZuC,IZuN+EsC,ZuC,IZuN+EsC,CeC,CeN \
+  --outgroup Sor \
+  --SNPs 100,500,1000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC
 
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC_mc10
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered_mc10.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations EsC,SoC,SoN+EsC,ISoC,ISoN+EsC,ISoC,SoN+EsC,SoC,ISoN+EsC,IZuC,IZuN+EsC,ZuC,IZuN+EsC,CeC,CeN \
---outgroup Sor \
---SNPs 100,500,1000 \
---window NA \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC_mc10
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered_mc10.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations EsC,SoC,SoN+EsC,ISoC,ISoN+EsC,ISoC,SoN+EsC,SoC,ISoN+EsC,IZuC,IZuN+EsC,ZuC,IZuN+EsC,CeC,CeN \
+  --outgroup Sor \
+  --SNPs 100,500,1000 \
+  --window NA \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC_mc10
 
 
 # Then test the three sympatric populations using Petroia cynipsea as H1
@@ -378,24 +378,24 @@ python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_PeC
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations PeC,SoC,SoN+PeC,ISoC,ISoN+PeC,ISoC,SoN+PeC,SoC,ISoN+PeC,IZuC,IZuN+PeC,ZuC,IZuN+PeC,CeC,CeN \
---outgroup Sor \
---SNPs 100,500,1000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_PeC
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations PeC,SoC,SoN+PeC,ISoC,ISoN+PeC,ISoC,SoN+PeC,SoC,ISoN+PeC,IZuC,IZuN+PeC,ZuC,IZuN+PeC,CeC,CeN \
+  --outgroup Sor \
+  --SNPs 100,500,1000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_PeC
 
 # Then test the three sympatric populations using Westerwald cynipsea as H1
 
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_WeC
 
 python /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations WeC,SoC,SoN+WeC,ISoC,ISoN+WeC,ISoC,SoN+WeC,SoC,ISoN+WeC,IZuC,IZuN+WeC,ZuC,IZuN+WeC,CeC,CeN \
---outgroup Sor \
---SNPs 100,500,1000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_WeC
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations WeC,SoC,SoN+WeC,ISoC,ISoN+WeC,ISoC,SoN+WeC,SoC,ISoN+WeC,IZuC,IZuN+WeC,ZuC,IZuN+WeC,CeC,CeN \
+  --outgroup Sor \
+  --SNPs 100,500,1000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_WeC
 
 for i in /Users/martinkapun/Desktop/ABBA/500/*.stat ; do awk '{print FILENAME"\t"$0}' $i >> /Users/martinkapun/Desktop/ABBA/stats.txt ; done
 
@@ -444,7 +444,7 @@ for i in /Volumes/MartinResearch2/Wolf2019/FASTQ/3_Trimmo/*/*/*R1*
 
 do
 
-echo ${i##*/} `gunzip -c "$i" | wc -l | awk '{print $1}'` >> /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/RawReads.txt
+  echo ${i##*/} `gunzip -c "$i" | wc -l | awk '{print $1}'` >> /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/RawReads.txt
 
 done
 
@@ -455,7 +455,7 @@ for i in /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/*/mapping/*InDel.ba
 
 do
 
-echo ${i##*/} `samtools view -c "$i" | awk '{print $1}'` >> /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/mappedReads.txt
+  echo ${i##*/} `samtools view -c "$i" | awk '{print $1}'` >> /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/mappedReads.txt
 
 done
 
@@ -465,7 +465,7 @@ for i in /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/*/mapping/*raw.bam
 
 do
 
-echo ${i##*/} `samtools view -c -F 260 "$i" | awk '{print $1}'` >> /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/RawMappedReads.txt
+  echo ${i##*/} `samtools view -c -F 260 "$i" | awk '{print $1}'` >> /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/RawMappedReads.txt
 
 done
 
@@ -475,7 +475,7 @@ for i in /Volumes/MartinResearch2/Wolf2019/FASTQ/Seor/SEOR_250_trimmed_paired_1.
 
 do
 
-echo ${i##*/} `gunzip -c "$i" | wc -l | awk '{print $1}'` >> /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/RawReads.txt
+  echo ${i##*/} `gunzip -c "$i" | wc -l | awk '{print $1}'` >> /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/RawReads.txt
 
 done
 
@@ -486,22 +486,22 @@ sed 's/ /:/g' /Volumes/MartinResearch2/Wolf2019/analyses/checkFASTA/seto.txt > /
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/pi
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/pipeline4Publication/scripts/TrueWindows.py \
---badcov /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA_BS.txt.gz \
---te /Volumes/MartinResearch2/Wolf2019/references/seto_repeat_annotation.gff3 \
---window 200000 \
---step 200000 \
---chromosomes /Volumes/MartinResearch2/Wolf2019/analyses/checkFASTA/seto.cont \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/pi/200k_windows.txt
+  --badcov /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA_BS.txt.gz \
+  --te /Volumes/MartinResearch2/Wolf2019/references/seto_repeat_annotation.gff3 \
+  --window 200000 \
+  --step 200000 \
+  --chromosomes /Volumes/MartinResearch2/Wolf2019/analyses/checkFASTA/seto.cont \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/pi/200k_windows.txt
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/pipeline4Publication/scripts/PopGen-var.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.sync.gz \
---pool-size 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50 \
---min-count 2 \
---window 200000 \
---step 200000 \
---sitecount /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/pi/200k_windows.txt-200000-200000.txt \
---min-sites-frac 0.75 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/pi/popgen
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.sync.gz \
+  --pool-size 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50 \
+  --min-count 2 \
+  --window 200000 \
+  --step 200000 \
+  --sitecount /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/pi/200k_windows.txt-200000-200000.txt \
+  --min-sites-frac 0.75 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/pi/popgen
 
 
 
@@ -517,15 +517,15 @@ for i in /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/*/*/*_500SNPs.abba
 
 do
 
-echo $i
+  echo $i
 
-sh /Volumes/MartinResearch2/Wolf2019/shell/doBlast.sh $i &
+  sh /Volumes/MartinResearch2/Wolf2019/shell/doBlast.sh $i &
 
-NPROC=$(($NPROC+1))
-if [ "$NPROC" -ge 15 ]; then
-wait
-NPROC=0
-fi
+  NPROC=$(($NPROC+1))
+  if [ "$NPROC" -ge 15 ]; then
+    wait
+    NPROC=0
+  fi
 
 done
 
@@ -536,9 +536,9 @@ for i in /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/*/*/*_500SNPs.abba
 
 do
 
-echo $i
+  echo $i
 
-python /Volumes/MartinResearch2/Wolf2019/scripts/FixGO.py $i >> /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/GO/All_Go2.txt
+  python /Volumes/MartinResearch2/Wolf2019/scripts/FixGO.py $i >> /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/GO/All_Go2.txt
 
 done
 
@@ -547,96 +547,96 @@ done
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/cov
 
 python2.7 /Volumes/MartinResearch3/Tad2019/Patrick/scripts/mpileup2cov.py \
-/Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA.mpileup.gz \
-/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/cov/ABBA_BABA.cov \
-ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor
+  /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA.mpileup.gz \
+  /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/cov/ABBA_BABA.cov \
+  ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/MergeCovNStuff.py \
-/Volumes/MartinResearch2/Wolf2019/analyses/checkFASTA/seto.txt \
-/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/cov/ABBA_BABA.cov_mean \
-> /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/cov/ABBA_BABA_cov_mean_len.txt
+  /Volumes/MartinResearch2/Wolf2019/analyses/checkFASTA/seto.txt \
+  /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/cov/ABBA_BABA.cov_mean \
+  > /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/cov/ABBA_BABA_cov_mean_len.txt
 
 rscript /Volumes/MartinResearch2/Wolf2019/scripts/findCoveragePeaks.r \
-/Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/cov/ABBA_BABA_cov_mean_len
+  /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/cov/ABBA_BABA_cov_mean_len
 
 
 ## test new window function
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations EsC,SoC,SoN+EsC,ISoC,ISoN+EsC,ISoC,SoN+EsC,SoC,ISoN+EsC,IZuC,IZuN+EsC,ZuC,IZuN+EsC,CeC,CeN \
---outgroup Sor \
---SNPs NA \
---window 100000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC_window
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations EsC,SoC,SoN+EsC,ISoC,ISoN+EsC,ISoC,SoN+EsC,SoC,ISoN+EsC,IZuC,IZuN+EsC,ZuC,IZuN+EsC,CeC,CeN \
+  --outgroup Sor \
+  --SNPs NA \
+  --window 100000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC_window
 
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC_window_200k
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations EsC,SoC,SoN+EsC,ISoC,ISoN+EsC,ISoC,SoN+EsC,SoC,ISoN+EsC,IZuC,IZuN+EsC,ZuC,IZuN+EsC,CeC,CeN \
---outgroup Sor \
---SNPs NA \
---window 200000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC_window_200k
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations EsC,SoC,SoN+EsC,ISoC,ISoN+EsC,ISoC,SoN+EsC,SoC,ISoN+EsC,IZuC,IZuN+EsC,ZuC,IZuN+EsC,CeC,CeN \
+  --outgroup Sor \
+  --SNPs NA \
+  --window 200000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC_window_200k
 
 mkdir  /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC_window_200k_mc10
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered_mc10.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations EsC,SoC,SoN+EsC,ISoC,ISoN+EsC,ISoC,SoN+EsC,SoC,ISoN+EsC,IZuC,IZuN+EsC,ZuC,IZuN+EsC,CeC,CeN \
---outgroup Sor \
---SNPs NA \
---window 200000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC_window_200k_mc10
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered_mc10.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations EsC,SoC,SoN+EsC,ISoC,ISoN+EsC,ISoC,SoN+EsC,SoC,ISoN+EsC,IZuC,IZuN+EsC,ZuC,IZuN+EsC,CeC,CeN \
+  --outgroup Sor \
+  --SNPs NA \
+  --window 200000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_EsC_window_200k_mc10
 
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_PeC_100k
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations PeC,SoC,SoN+PeC,ISoC,ISoN+PeC,ISoC,SoN+PeC,SoC,ISoN+PeC,IZuC,IZuN+PeC,ZuC,IZuN+PeC,CeC,CeN \
---outgroup Sor \
---SNPs NA \
---window 100000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_PeC_100k
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations PeC,SoC,SoN+PeC,ISoC,ISoN+PeC,ISoC,SoN+PeC,SoC,ISoN+PeC,IZuC,IZuN+PeC,ZuC,IZuN+PeC,CeC,CeN \
+  --outgroup Sor \
+  --SNPs NA \
+  --window 100000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_PeC_100k
 
 
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_PeC_200k
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations PeC,SoC,SoN+PeC,ISoC,ISoN+PeC,ISoC,SoN+PeC,SoC,ISoN+PeC,IZuC,IZuN+PeC,ZuC,IZuN+PeC,CeC,CeN \
---outgroup Sor \
---SNPs NA \
---window 200000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_PeC_200k
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations PeC,SoC,SoN+PeC,ISoC,ISoN+PeC,ISoC,SoN+PeC,SoC,ISoN+PeC,IZuC,IZuN+PeC,ZuC,IZuN+PeC,CeC,CeN \
+  --outgroup Sor \
+  --SNPs NA \
+  --window 200000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_PeC_200k
 
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_GeN_100k
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations GeN,SoN,SoC+GeN,ISoN,ISoC+GeN,SoN,ISoC+GeN,ISoN,SoC+GeN,IZuN,IZuC+GeN,IZuN,ZuC+GeN,CeN,CeC \
---outgroup Sor \
---SNPs NA \
---window 100000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_GeN_100k
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations GeN,SoN,SoC+GeN,ISoN,ISoC+GeN,SoN,ISoC+GeN,ISoN,SoC+GeN,IZuN,IZuC+GeN,IZuN,ZuC+GeN,CeN,CeC \
+  --outgroup Sor \
+  --SNPs NA \
+  --window 100000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_GeN_100k
 
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_GeN_200k
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations GeN,SoN,SoC+GeN,ISoN,ISoC+GeN,SoN,ISoC+GeN,ISoN,SoC+GeN,IZuN,IZuC+GeN,IZuN,ZuC+GeN,CeN,CeC \
---outgroup Sor \
---SNPs NA \
---window 200000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_GeN_200k
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations GeN,SoN,SoC+GeN,ISoN,ISoC+GeN,SoN,ISoC+GeN,ISoN,SoC+GeN,IZuN,IZuC+GeN,IZuN,ZuC+GeN,CeN,CeC \
+  --outgroup Sor \
+  --SNPs NA \
+  --window 200000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_GeN_200k
 
 
 # Finally test the three sympatric populations using Hospental neocynipsea as H1
@@ -644,36 +644,36 @@ python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_HoN_100k
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations HoN,SoN,SoC+HoN,ISoN,ISoC+HoN,SoN,ISoC+HoN,ISoN,SoC+HoN,IZuN,IZuC+HoN,IZuN,ZuC+HoN,CeN,CeC \
---outgroup Sor \
---SNPs NA \
---window 100000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_HoN_100k
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations HoN,SoN,SoC+HoN,ISoN,ISoC+HoN,SoN,ISoC+HoN,ISoN,SoC+HoN,IZuN,IZuC+HoN,IZuN,ZuC+HoN,CeN,CeC \
+  --outgroup Sor \
+  --SNPs NA \
+  --window 100000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_HoN_100k
 
 mkdir /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_HoN_200k
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations HoN,SoN,SoC+HoN,ISoN,ISoC+HoN,SoN,ISoC+HoN,ISoN,SoC+HoN,IZuN,IZuC+HoN,IZuN,ZuC+HoN,CeN,CeC \
---outgroup Sor \
---SNPs NA \
---window 200000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_HoN_200k
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations HoN,SoN,SoC+HoN,ISoN,ISoC+HoN,SoN,ISoC+HoN,ISoN,SoC+HoN,IZuN,IZuC+HoN,IZuN,ZuC+HoN,CeN,CeC \
+  --outgroup Sor \
+  --SNPs NA \
+  --window 200000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_HoN_200k
 
 
 mkdir  /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_Zu_window_200k_mc10
 
 python2.7 /Volumes/MartinResearch2/Wolf2019/scripts/ABBA_BABA_driver.py \
---input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered_mc10.af.gz \
---names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
---combinations ZuC,SoC,SoN+IZuC,SoC,SoN+ZuC,ISoC,ISoN+IZuC,ISoC,ISoN+ZuC,ISoC,SoN+IZuN,SoN,SoC+IZuN,ISoN,ISoc \
---outgroup Sor \
---SNPs NA \
---window 200000 \
---output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_Zu_window_200k_mc10
+  --input /Volumes/MartinResearch2/Wolf2019/mapping/thoracica/ABBA_BABA-filtered_mc10.af.gz \
+  --names ISoC,IZuC,CeC,EsC,LeC,LuC,MaC,MoC,PeC,SoC,WeC,ZuC,ISoN,IZuN,BaN,CeN,GeN,HoN,KeN,MoN,SiN,SoN,SorS,Sor \
+  --combinations ZuC,SoC,SoN+IZuC,SoC,SoN+ZuC,ISoC,ISoN+IZuC,ISoC,ISoN+ZuC,ISoC,SoN+IZuN,SoN,SoC+IZuN,ISoN,ISoc \
+  --outgroup Sor \
+  --SNPs NA \
+  --window 200000 \
+  --output /Volumes/MartinResearch2/Wolf2019/analyses/AtheneNew/AbbaBaba_Zu_window_200k_mc10
 
 
 ### climate
@@ -750,3 +750,9 @@ mtext("precipitation", side = 4, line = 3)
 
 
 dev.off()
+'''
+
+
+## only keep pops in dataset for publishing
+
+python Archive/subsetAFByName.py --input data/ABBA_BABA-filtered.af.gz --names ISoC,IZuC,MoC,PhC,LeC,LuC,MaC,MoC,PtC,SoC,WeC,ZuC,ISoN,IZuN,BaN,MoN,GeN,HoN,KeN,MaN,SiN,SoN,SorS,Sor --targets PhC,PtC,SoC,ZuC,MoC,GeN,HoN,SoN,MoN,IZuC,IZuN,Sor | gzip > data/Sepsid_ABBA_BABA.af.gz
