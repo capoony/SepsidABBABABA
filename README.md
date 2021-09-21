@@ -1,6 +1,6 @@
 # Bioinformatic pipeline for ABBA-BABA analyses of genomic allele frequency data of _Sepsis cynipsea_ and _S. neocynipsea_ in Europe
 
-## (1) Trimming of raw reads was carried out with [trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
+## (1) Trimming of raw reads, which are deposited on the SRA archive under [PRJNA612154](https://www.ncbi.nlm.nih.gov/bioproject?LinkName=biosample_bioproject&from_uid=14363816) was carried out with [trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 
 ```bash
 java -jar trimmomatic-0.36.jar \
